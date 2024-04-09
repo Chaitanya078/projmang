@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager</title>
+    <link rel="icon" href="tytol.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Project Countdown Timer</h1>
+            <p>Enter project details and deadline:</p>
+            <input type="text" id="projectName" placeholder="Project Name">
+            <textarea id="projectDescription" placeholder="Project Description"></textarea>
+            <input type="datetime-local" id="deadline" min="2022-01-01T00:00" max="2050-12-31T23:59">
+            <button onclick="startCountdown()">Start Timer</button>
+        </div>
+        <div class="main-time">
+            <div>
+                <h3 class="day">0</h3>
+                <h3>DAY</h3>
+            </div>
+            <div>
+                <h3 class="hours">0</h3>
+                <h3>HOUR</h3>
+            </div>
+            <div>
+                <h3 class="minutes">0</h3>
+                <h3>MINUTE</h3>
+            </div>
+            <div>
+                <h3 class="seconds">0</h3>
+                <h3>SECOND</h3>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <figure>
+            <img src="main2.svg" alt="main image">
+        </figure>
+    </section>
+    <script src="app.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDQfnOh0KVh-f8k5K_KQWdvPZcomg-P-8A",
+          authDomain: "deft-province-419509.firebaseapp.com",
+          projectId: "deft-province-419509",
+          storageBucket: "deft-province-419509.appspot.com",
+          messagingSenderId: "714827635802",
+          appId: "1:714827635802:web:a0bad2134fa54a9ec10c63",
+          measurementId: "G-M9WP3MZLK5"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
